@@ -166,7 +166,7 @@ function App(props) {
             path="/:id" 
             render={({match}) =>  
               <ImagePage 
-                match={match}
+                id={match.params.id}
                 getImage={getImageHandler} 
                 changeImageLikeStatus={changeImageLikeStatusHandler}
                 imageData={openImageData} />

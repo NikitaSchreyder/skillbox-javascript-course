@@ -7,6 +7,7 @@ import UserProfileSmall from '../userProfileSmall/userProfileSmall'
 import './imagePage.scss'
 
 function ImagePage({id, openImageData, getImage, changeImageLikeStatus}) {
+    console.log(id);
     useEffect(() => getImage(id), []);
     return (
         <section className="image-block">

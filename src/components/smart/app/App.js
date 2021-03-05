@@ -108,7 +108,7 @@ function App(props) {
   }
 
   const changeImageLikeStatusHandler = () => {
-    changeImageLikeStatus(openImageData, USER_AUTHENTICATION_TOKEN, imagesData, setImagesData, setOpenImageData)
+    changeImageLikeStatus(openImageData, USER_AUTHENTICATION_TOKEN, imagesData, setOpenImageData)
   }
 
   const HomeComponent = () => {

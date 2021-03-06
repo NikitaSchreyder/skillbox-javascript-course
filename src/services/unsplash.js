@@ -5,7 +5,7 @@ const AUTH_URL = 'https://unsplash.com/oauth/authorize';
 const OAUTH_URL = 'https://unsplash.com/oauth';
 const ACCESS_KEY = 'FuoHarhp8SvzFZd00EL2iCR0jmAUROZGlkQmxiPMgnY';
 const SECRET_KEY = 'xWfXAxIzsSuM8P7CqRZ0Iuq4Qvx63uTsmsYayPtbvHw';
-const REDIRECT_URL = 'http://insplash.ru';
+const REDIRECT_URL = 'http://localhost:3000';
 const IMAGES_PER_LOAD = 9;
 
 const unsplash = createApi({

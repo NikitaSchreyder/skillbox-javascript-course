@@ -1,3 +1,5 @@
+import InfiniteScroll from 'react-infinite-scroller';
+
 import ImagePreview from '../imagePreview/imagePreview';
 
 import './imagesRoll.scss'
@@ -6,13 +8,16 @@ function ImagesRoll({imagesData, loadImages}) {
   const images = imagesData.slice(0, imagesData.length).map(item => <ImagePreview key={item.id + Math.random()} image={item}/>)
   return (
     <section className="images-roll">
-      <div className="images-roll__content">
+      <InfiniteScroll 
+        dataLength={images.length}
+        loadMore={loadImages}
+        hasMore={true}
+        className="images-roll__content"
+      >
         {
-          [...images]
+          images
         }
-      </div>
-      
-      <button className="images-roll__load-more" onClick={loadImages}>Ещё публикации</button>
+      </InfiniteScroll>
     </section>
   )
 }

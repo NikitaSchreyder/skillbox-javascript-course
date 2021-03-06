@@ -66,11 +66,10 @@ function App(props) {
     if(openImageData != null) {
       setOpenImageData(null)
     }
-    if(searchImagesData.length != 0) {
-      setSearchImagesPage(1);
-      setSearchImagesData([]);
-      setSearchImagesQuery('')
-    }
+    setSearchImagesPage(1);
+    setSearchImagesData([]);
+    setSearchImagesQuery('')
+
     userData && (
       getUserLikedImages(userData.username, 1, userLikedImagesData, setUserLikedImagesData, setLikedImagesPage, USER_AUTHENTICATION_TOKEN)
     )
@@ -98,13 +97,11 @@ function App(props) {
     if(typeof query == 'string') {
       setSearchImagesData([]);
       setSearchImagesQuery(query);
-      searchImages(query, 1, searchImagesData, setSearchImagesData, searchImagesPage);
-      setSearchImagesPage(2);
+      searchImages(query, 1, searchImagesData, setSearchImagesData, searchImagesPage, setSearchImagesPage);
+      window.location.hash = '#search';
     } else {
-      searchImages(searchImagesQuery, searchImagesPage, searchImagesData, setSearchImagesData, searchImagesPage)
-      setSearchImagesPage(searchImagesPage + 1)
+      searchImages(searchImagesQuery, searchImagesPage, searchImagesData, setSearchImagesData, setSearchImagesPage)
     }
-    window.location.hash = '#search';
   }
 
   const changeImageLikeStatusHandler = () => {

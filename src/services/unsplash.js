@@ -3,9 +3,9 @@ import { createApi } from 'unsplash-js';
 const API_URL = 'https://api.unsplash.com';
 const AUTH_URL = 'https://unsplash.com/oauth/authorize';
 const OAUTH_URL = 'https://unsplash.com/oauth';
-const ACCESS_KEY = 'U_b5FmFEFwG_XS0hGuSFok_75nv8eMrqTxdsor0c4hA';
-const SECRET_KEY = 'OQP4XWFop9aRhYq3e_lrDgStM7l_WKXPuXsM94x6bKQ';
-const REDIRECT_URL = 'http://localhost:3000';
+const ACCESS_KEY = '9X-JqtPplVvHmDYkSA6ERBVexK9S6BpJTB8wEL9tqMQ';
+const SECRET_KEY = 'm9B5OiR-J9JIsbu5qVZLXM2QlILiVw3_mPLKKwBuhwU';
+const REDIRECT_URL = 'http://insplash.ru';
 const IMAGES_PER_LOAD = 9;
 
 const unsplash = createApi({
@@ -104,8 +104,10 @@ export const searchImages = (query, searchImagesPage, searchImagesData, setSearc
       const images = data.response.results;
       if(searchImagesPage == 1) {
         setSearchImagesData(images);
+        setSearchImagesPage(2);
       } else {
         setSearchImagesData([...searchImagesData, ...images]);
+        setSearchImagesPage(searchImagesPage + 1)
       }
     })
     .catch(err => console.error(err));

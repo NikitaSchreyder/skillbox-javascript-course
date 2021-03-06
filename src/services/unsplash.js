@@ -3,8 +3,8 @@ import { createApi } from 'unsplash-js';
 const API_URL = 'https://api.unsplash.com';
 const AUTH_URL = 'https://unsplash.com/oauth/authorize';
 const OAUTH_URL = 'https://unsplash.com/oauth';
-const ACCESS_KEY = '9X-JqtPplVvHmDYkSA6ERBVexK9S6BpJTB8wEL9tqMQ';
-const SECRET_KEY = 'm9B5OiR-J9JIsbu5qVZLXM2QlILiVw3_mPLKKwBuhwU';
+const ACCESS_KEY = 'FuoHarhp8SvzFZd00EL2iCR0jmAUROZGlkQmxiPMgnY';
+const SECRET_KEY = 'xWfXAxIzsSuM8P7CqRZ0Iuq4Qvx63uTsmsYayPtbvHw';
 const REDIRECT_URL = 'http://insplash.ru';
 const IMAGES_PER_LOAD = 9;
 
